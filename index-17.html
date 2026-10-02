@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Seja administrador | Billie Global BR</title>
+  <meta name="description" content="Quer ajudar a cuidar da Billie Global BR, a comunidade brasileira de fãs da Billie Eilish? Preencha o formulário e candidate-se a administrador.">
+  <meta name="theme-color" content="#c1121f">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%23c1121f%22/><text x=%2250%22 y=%2268%22 font-size=%2260%22 text-anchor=%22middle%22 fill=%22white%22 font-family=%22Arial Black,Arial%22 font-weight=%22900%22>B</text></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #c1121f;
+      --red-dark: #8f0d17;
+      --white: #ffffff;
+      --white-soft: rgba(255, 255, 255, 0.82);
+      --font: "Archivo", "Helvetica Neue", Arial, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      font-family: var(--font);
+      color: var(--white);
+      background: var(--red);
+      background-image: radial-gradient(circle at 20% 10%, #d8202e 0%, var(--red) 45%, var(--red-dark) 100%);
+      background-attachment: fixed;
+      padding: env(safe-area-inset-top, 0px) 24px env(safe-area-inset-bottom, 0px);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page {
+      max-width: 1100px;
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 64px;
+      padding: 32px 0;
+    }
+
+    /* ---------- Texto ---------- */
+    .intro { max-width: 460px; }
+
+    .brand {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 8px 16px;
+      border: 2px solid var(--white);
+      border-radius: 999px;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-weight: 900;
+      font-size: clamp(2.6rem, 6vw, 4.6rem);
+      line-height: 0.98;
+      letter-spacing: -0.03em;
+      margin-bottom: 22px;
+    }
+
+    .intro p {
+      font-size: 1.125rem;
+      line-height: 1.55;
+      color: var(--white-soft);
+      max-width: 40ch;
+    }
+
+    /* ---------- Celular ---------- */
+    .phone {
+      position: relative;
+      width: 420px;
+      height: clamp(640px, 88vh, 880px);
+      background: var(--white);
+      border-radius: 52px;
+      padding: 12px;
+      box-shadow:
+        0 0 0 3px rgba(255, 255, 255, 0.35),
+        0 40px 80px rgba(60, 0, 6, 0.55);
+    }
+
+    .phone::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 96px;
+      height: 24px;
+      background: #111;
+      border-radius: 999px;
+      z-index: 2;
+    }
+
+    .screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 42px;
+      overflow: hidden;
+      background: var(--white);
+      padding-top: 38px;
+    }
+
+    .screen iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ---------- Tablet / celular de verdade ---------- */
+    @media (max-width: 900px) {
+      .page {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 32px;
+        padding: 28px 0 40px;
+      }
+      .intro { max-width: 520px; }
+      .intro p { margin: 0 auto; }
+    }
+
+    @media (max-width: 520px) {
+      body { padding-left: 0; padding-right: 0; }
+
+      .intro { padding: 0 24px; }
+
+      h1 { font-size: 2.6rem; }
+
+      .phone {
+        width: 100%;
+        height: 86vh;
+        min-height: 640px;
+        padding: 0;
+        border-radius: 28px 28px 0 0;
+        box-shadow: none;
+      }
+      .phone::before { display: none; }
+      .screen {
+        border-radius: 28px 28px 0 0;
+        padding-top: 0;
+      }
+    }
+
+    :focus-visible { outline: 3px solid var(--white); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="intro">
+      <span class="brand">Billie Global BR</span>
+      <h1>Seja admin da Billie Global BR</h1>
+      <p>Quer ajudar a cuidar da comunidade brasileira de fãs da Billie Eilish? Preencha o formulário e conte um pouco sobre você.</p>
+    </section>
+
+    <section class="phone" aria-label="Formulário para se tornar administrador">
+      <div class="screen">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSeT3h5ttHT5XMc3Jd9J6FVUF6gie930j0yBlIw4R-0ZsXOdOg/viewform?embedded=true"
+          title="Formulário para ser administrador da Billie Global BR"
+          loading="lazy"
+          frameborder="0"
+          marginheight="0"
+          marginwidth="0">Carregando…</iframe>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
